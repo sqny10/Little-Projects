@@ -1,0 +1,110 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #2a2a72;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    min-height: 100vh;
+    padding: 2rem;
+    gap: 2rem;
+}
+
+.user-form{
+    width: 100%;
+    max-width: 60rem;
+}
+
+.user-form input{
+    width: 100%;
+    display: block;
+    background-color: #4c2885;
+    border: none;
+    border-radius: 100vw;
+    color: white;
+    padding: 1rem;
+    font-family: inherit;
+    font-size: 1rem;
+    box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
+                0 5px 40px rgba(0, 0, 0, 1.1);
+}
+
+.user-form input::placeholder{
+    color: #bbb;
+}
+
+.user-form input:focus{
+    outline: none;
+}
+
+.card{
+    max-width: 70rem;
+    background-color: #4c2885;
+    border-radius: 1rem;
+    box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
+                0 5px 40px rgba(0, 0, 0, 1.1);
+    display: flex;
+    padding: 3rem;
+    margin: 0 1.5rem;
+    gap: 2rem;
+}
+
+.card .avatar{
+    border-radius: 50%;
+    border: 10px solid #2a2a72;
+    width: 10rem; 
+    height: 10rem;
+}
+
+.user-info{
+    color: #eee;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.user-info ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    max-width: 70%;
+    gap: 1rem;
+}
+
+.user-info ul li strong{
+    font-size: 0.9rem;
+}
+
+.repo{
+    text-decoration: none;
+    color: #fff;
+    background-color: #2a2a72;
+    font-size: 0.7rem;
+    padding: 0.25rem 0.5rem;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.repo + .repo{
+    margin-left: 0.25rem;
+}
+
+@media(max-width: 600px){
+    .card{
+        flex-direction: column;
+        align-items: center;
+        max-width: 400px;
+    }
+
+    .user-form{
+        max-width: 400px;
+    }
+}

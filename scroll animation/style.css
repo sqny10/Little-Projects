@@ -1,0 +1,48 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: sans-serif;
+    background-color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5rem;
+    overflow-x: hidden;
+}
+
+h1{
+    margin-bottom: 2rem;
+    padding: 1rem 5rem;
+    background-color: rgb(207, 127, 23);
+    color: #fafafa;
+    border-radius: 0.25rem;
+}
+
+.box{
+    padding: 3rem 5rem;
+    background-color: aquamarine;
+    border-radius: 0.5rem;
+    box-shadow: 5px 4px 8px rgba(0, 0, 0, 0.3);
+    transform: translateX(500%);
+    opacity: 0;
+    transition: transform 0.5s ease-out,
+                opacity 0.6s ease-out;
+}
+
+.box:nth-of-type(even){
+    transform: translateX(-500%);
+}
+
+.box.show{
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.box + .box{
+    margin-top: 1rem;
+}

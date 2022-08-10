@@ -1,0 +1,93 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: sans-serif;
+    background-color: burlywood;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card{
+    padding: 5rem 2rem;
+    background-color:blue;
+    border-radius: 0.5rem;
+    color: whitesmoke;
+}
+
+h3{
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.input-field{
+    width: 100%;
+    height: 5rem;
+    position: relative;
+    margin-bottom: 0.5rem;
+    padding: 1rem 0;
+}
+
+.input-field:last-of-type{
+    margin-bottom: 2rem;
+}
+
+.input-field .input{
+    height: 100%;
+    width: 100%;
+    background-color: gainsboro;
+    border: none;
+    font-size: 1.2rem;
+    padding: 0 0.75rem;
+    border-radius: 0.25rem;
+}
+
+.input-field .label{
+    position: absolute;
+    top: 50%;
+    left: 0.75rem;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+}
+
+.btn{
+    display: inline-block;
+    width: 100%;
+    padding: 1rem 0.5rem;
+    font-family: inherit;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    background-color: antiquewhite;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+}
+
+.btn:active{
+    transform: scale(0.98);
+    outline: none;
+}
+
+.input:focus,
+.btn:focus{
+    outline: none;
+}
+
+.input-field .label span{
+    display: inline-block;
+    min-width: 0.25rem;
+    color: black;
+    transform: translateY(0);
+    transition: 0.3s ease-out;
+}
+
+.input-field .input:focus + .label span{
+    color: whitesmoke;
+    transform: translateY(-2.5rem);
+}

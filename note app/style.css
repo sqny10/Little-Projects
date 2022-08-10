@@ -1,0 +1,86 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5rem 2rem;
+    background-color: #7bdaf3;
+}
+
+.add{
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+    background-color: #9ec862;
+    border: none;
+    border-radius: 3px;
+    padding: 0.5rem 1rem;
+    color: #fff;
+    font-family: inherit;
+    letter-spacing: 1px;
+}
+
+.add:focus{
+    outline: none;
+}
+
+.note{
+    background-color: #fff;
+    box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    height: 400px;
+    width: 400px;
+    overflow: hidden;
+}
+
+.note + .note{
+    margin-left: 1.5rem;
+}
+
+.note .tools{
+    background-color: #9ec862;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0.5rem;
+    height: 50px;
+}
+
+.note .tools button{
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    background-color: transparent;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.note .tools button:focus{
+    outline: none;
+}
+
+.note .tools button + button{
+    margin-left: 0.5rem;
+}
+
+.note textarea{
+    outline: none;
+    font-family: inherit;
+    font-size: 1.2rem;
+    border: none;
+    height: 350px;
+    width: 100%;
+    padding: 1rem;
+    resize: none;
+    color: #333;
+}
+
+.hidden{
+    display: none;
+}
